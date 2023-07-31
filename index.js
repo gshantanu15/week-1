@@ -42,11 +42,11 @@ async function getText(dogBreed) {
 function addWikiItem(dogBreed) {
 
   const wikiItem = document.createElement("div");
-  wikiItem.id = "wiki-item";
+  wikiItem.className = "wiki-item";
   const wikiText = document.createElement("div");
-  wikiText.id = "wiki-text";
+  wikiText.className = "wiki-content";
   const imgBox = document.createElement("div");
-  imgBox.id = "image-box";
+  imgBox.className = "img-container";
   
   const wikiBox = document.createDocumentFragment();
   const img = wikiBox
@@ -58,20 +58,20 @@ function addWikiItem(dogBreed) {
   const imageURL = logImage(dogBreed);
   imageURL.then((imageURL) => {
     image.src = imageURL;
-    image.id = "wiki-image"
+    image.className = "wiki-img"
   })
   img.appendChild(image);
   
   const header = document.createElement("h1")
   header.textContent = dogBreed
-  header.id = "breed-name"
+  header.className = "wiki-header"
   wikiItem.insertBefore(header,wikiText);
   
   const dogText = document.createElement("p")
   const breedInfo = getText(dogBreed);
   breedInfo.then((breedInfo) =>{
     dogText.textContent = breedInfo;
-    dogText.id = "wiki-info"
+    dogText.className = "wiki-text"
   })
   wikiText.insertBefore(dogText,imgBox);
 
