@@ -1,3 +1,46 @@
 body {
   font-family: sans-serif;
 }
+
+#wiki-image{
+  width: 100%;
+}
+
+#wiki-item {
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0px 0px 10px grey;
+  margin: 0 auto;
+}
+
+#breed-name {
+  display: flex;
+  align-self: center;
+}
+
+#wiki-text {
+  padding: 10px;
+  
+}
+
+@media (min-width: 600px) {
+
+  #wiki-text {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+  #wiki-info {
+    min-width: 50%;
+    max-width: 50%;
+  }
+  #image-box {
+    min-width: 50%;
+    max-width: 50%;
+}
+
+.container {
+max-width: 960px;
+margin: 0 auto;
+}
+}
